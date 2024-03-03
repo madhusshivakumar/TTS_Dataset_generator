@@ -4,8 +4,8 @@ from utils.youtube_transcript_extractor import YouTubeTranscriptExtractor
 from utils.tts_dataset_generator import TTSDatasetGenerator
 
 if __name__ == "__main__":
-    youtube_audio_downloader = YouTubeAudioDownloader()
-    youtube_transcript_creator = YouTubeTranscriptExtractor()
+    youtube_audio_downloader = YouTubeAudioDownloader("output")
+    youtube_transcript_creator = YouTubeTranscriptExtractor("ga")
 
     api_object = YouTubeController()
 
@@ -20,4 +20,4 @@ if __name__ == "__main__":
 
     for video in videos:
         video_id = video['id']['videoId']
-        dataset_generator.generate_dataset(video_id, 'ga')
+        dataset_generator.generate_dataset(video_id)

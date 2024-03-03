@@ -6,13 +6,14 @@ class YouTubeAudioDownloader:
     A class to download audio from YouTube videos.
     """
 
-    def __init__(self):
+    def __init__(self, output_path):
         """
         Initializes the YouTubeAudioDownloader.
         """
+        self.output_path = output_path
         pass
 
-    def download_audio(self, output_path, video_id):
+    def download_audio(self, video_id):
         """
         Download audio from a YouTube video.
 
@@ -28,7 +29,7 @@ class YouTubeAudioDownloader:
             print(youtube_link)
             yt = YouTube(youtube_link)
             audio_stream = yt.streams.filter(only_audio=True).first()
-            audio_path = f"{output_path}/{video_id}"
+            audio_path = f"{self.output_path}/{video_id}"
             audio_stream.download(output_path=audio_path, filename=f"{video_id}.mp4")
             return f"{audio_path}/{video_id}.mp4"
         except AgeRestrictedError as e:

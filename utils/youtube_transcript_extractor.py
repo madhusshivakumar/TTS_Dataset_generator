@@ -5,13 +5,14 @@ class YouTubeTranscriptExtractor:
     A class to extract transcripts from YouTube videos.
     """
 
-    def __init__(self):
+    def __init__(self, preferred_language):
         """
         Initializes the YouTubeTranscriptExtractor.
         """
+        self.preferred_language = preferred_language
         pass
 
-    def extract_transcript(self, video_id, preferred_language):
+    def extract_transcript(self, video_id, ):
         """
         Extract transcript from a YouTube video.
 
@@ -26,7 +27,7 @@ class YouTubeTranscriptExtractor:
             transcripts = YouTubeTranscriptApi.list_transcripts(video_id)
             selected_transcript = None
             for transcript in transcripts:
-                if transcript.language_code == preferred_language:
+                if transcript.language_code == self.preferred_language:
                     selected_transcript = transcript
                     break
 
