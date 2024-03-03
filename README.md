@@ -26,3 +26,18 @@ In this repository, I have demonstrated dataset creation for the Irish language.
         - Exclusion of text within flower brackets
         - Removal of text within braces
         - Elimination of extra spaces
+
+
+# Installation
+
+Download this repository and install the packages in requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the main file 
+
+```bash
+python3 main.py
+```
