@@ -40,9 +40,17 @@ pip install -r requirements.txt
 
 # Run the main file 
 
+First we need to create an account in youtube V3 and get the API key.
+Then we update the API key in `main.py` file
+```bash 
+api_key = "API_KEY"
+```
+
+We can then run the `main.py` to create the datasets
 ```bash
 python3 main.py
-```
+`````` 
+
 
 The Output files would be saved in the output folder with this structure
 - output

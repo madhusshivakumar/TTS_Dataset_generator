@@ -13,8 +13,8 @@ if __name__ == "__main__":
     api_object = YouTubeController(api_key)
 
     # You can update these querires to improvise the search
-    # If you want to create a data set for different languages, 
-    # update these queries and update preferred language in line 8
+    # If you want to create a dataset for different languages, 
+    # update these queries and update preferred language in line 12
     videos = api_object.search_youtube_videos("Gaeilge")
     videos += api_object.search_youtube_videos("Gaeilge interviews")
     videos += api_object.search_youtube_videos("Gaeilge podcasts")
