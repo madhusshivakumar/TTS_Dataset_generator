@@ -10,7 +10,7 @@ class YouTubeController:
         """
         Initializes the YouTubeController.
         """
-        self.api_key = "AIzaSyCUmbrtm2qcflGvuY9gYmeD3ItzxbgD2pA"
+        self.api_key = "API_KEY"
 
     def search_youtube_videos(self, query, max_results=1000):
         """
