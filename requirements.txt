@@ -1,4 +1,4 @@
-google-api-python-client
-pytube
-pydub
-youtube-transcript-api
+google-api-python-client==2.20.0
+pytube==15.0.0
+pydub==0.25.1
+youtube-transcript-api=0.4.1

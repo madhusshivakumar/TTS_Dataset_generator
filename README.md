@@ -32,12 +32,31 @@ In this repository, I have demonstrated dataset creation for the Irish language.
 
 Download this repository and install the packages in requirements.txt
 
+I have used Python 3.11.5
+
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the main file 
+# Run the main file 
 
 ```bash
 python3 main.py
 ```
+
+The Output files would be saved in the output folder with this structure
+- output
+    - video_ID
+        - segments
+            - segment_0.mp3
+            - segment_0.txt
+            - segment_0_normalized.txt
+            - .
+            - .
+            - .
+        - audio.mp4
+    - video_ID
+    - video_ID
+
+![Output Image](output.png)
+

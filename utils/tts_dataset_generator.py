@@ -41,17 +41,16 @@ class TTSDatasetGenerator:
         cleaned_text = re.sub(r'\s+', ' ', cleaned_text).strip()
         return cleaned_text
 
-    def generate_dataset(self, video_id, preferred_language):
+    def generate_dataset(self, video_id : str):
         """
         Generate dataset for text-to-speech task.
 
         Args:
         video_id (str): The ID of the YouTube video.
-        preferred_language (str): The preferred language for the transcript.
         """
-        self.transcript = self.transcript_extractor.extract_transcript(video_id, preferred_language)
+        self.transcript = self.transcript_extractor.extract_transcript(video_id)
         if self.transcript:
-            self.audio_path = self.youtube_downloader.download_audio(self.output_path, video_id)
+            self.audio_path = self.youtube_downloader.download_audio(video_id)
             if self.audio_path:
                 self.audio = AudioSegment.from_file(self.audio_path)
                 self.matched_folder = os.path.join(self.output_path, video_id)

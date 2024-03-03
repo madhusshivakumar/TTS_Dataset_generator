@@ -6,18 +6,18 @@ class YouTubeAudioDownloader:
     A class to download audio from YouTube videos.
     """
 
-    def __init__(self, output_path):
+    def __init__(self, output_path : str) -> None:
         """
         Initializes the YouTubeAudioDownloader.
 
-        
+
         Args:
         output_path (str): The path to save the audio file.
         """
         self.output_path = output_path
         pass
 
-    def download_audio(self, video_id):
+    def download_audio(self, video_id : str) -> str:
         """
         Download audio from a YouTube video.
 
