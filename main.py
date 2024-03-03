@@ -9,12 +9,12 @@ if __name__ == "__main__":
     youtube_audio_downloader = YouTubeAudioDownloader("output")
     youtube_transcript_creator = YouTubeTranscriptExtractor(preferred_language)
 
-    api_key = "API_KEY"
+    api_key = "<API_KEY>"
     api_object = YouTubeController(api_key)
 
     # You can update these querires to improvise the search
     # If you want to create a dataset for different languages, 
-    # update these queries and update preferred language in line 12
+    # update these queries and update preferred language in line 08
     videos = api_object.search_youtube_videos("Gaeilge")
     videos += api_object.search_youtube_videos("Gaeilge interviews")
     videos += api_object.search_youtube_videos("Gaeilge podcasts")
