@@ -8,17 +8,19 @@ class YouTubeTranscriptExtractor:
     def __init__(self, preferred_language):
         """
         Initializes the YouTubeTranscriptExtractor.
+
+        Args:
+        preferred_language (str): The preferred language for the transcript.
         """
         self.preferred_language = preferred_language
         pass
 
-    def extract_transcript(self, video_id, ):
+    def extract_transcript(self, video_id):
         """
         Extract transcript from a YouTube video.
 
         Args:
         video_id (str): The ID of the YouTube video.
-        preferred_language (str): The preferred language for the transcript.
 
         Returns:
         dict: The transcript of the video.

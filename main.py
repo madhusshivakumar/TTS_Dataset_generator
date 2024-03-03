@@ -7,7 +7,8 @@ if __name__ == "__main__":
     youtube_audio_downloader = YouTubeAudioDownloader("output")
     youtube_transcript_creator = YouTubeTranscriptExtractor("ga")
 
-    api_object = YouTubeController()
+    api_key = "API_KEY"
+    api_object = YouTubeController(api_key)
 
     # You can update these querires to improvise the search
     # If you want to create a data set for different languages, 

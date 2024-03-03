@@ -9,6 +9,10 @@ class YouTubeAudioDownloader:
     def __init__(self, output_path):
         """
         Initializes the YouTubeAudioDownloader.
+
+        
+        Args:
+        output_path (str): The path to save the audio file.
         """
         self.output_path = output_path
         pass
@@ -18,7 +22,6 @@ class YouTubeAudioDownloader:
         Download audio from a YouTube video.
 
         Args:
-        output_path (str): The path to save the audio file.
         video_id (str): The ID of the YouTube video.
 
         Returns:

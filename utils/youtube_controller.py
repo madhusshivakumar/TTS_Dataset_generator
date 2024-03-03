@@ -6,11 +6,15 @@ class YouTubeController:
     A class to interact with the YouTube API.
     """
 
-    def __init__(self):
+    def __init__(self, api_key):
         """
         Initializes the YouTubeController.
+
+        Args:
+        api_key : Get API key for youtube API V3
+
         """
-        self.api_key = "API_KEY"
+        self.api_key = api_key
 
     def search_youtube_videos(self, query, max_results=1000):
         """
